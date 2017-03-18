@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>双向数据绑定Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <script type="text/javascript" src="assets/main.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="">
+  <div class="site">
+    
+<div id="app">
+  <p>姓名: <input type="text" v-model="user.name"></p>
+  <p>姓名：{{ user.name }}</p>
+  <p>{{user.name}}</p>
+</div>
+<div id="err"></div>
+<script type="text/javascript">
+  let app = new Vue({
+    el: '#app',
+    data: {
+      user: {
+        name: 'xiao555',
+        age: 25
+      },
+      city: 'xian'
+    }
+  })
+  try {
+    fuck()
+  } catch(e) {
+    // statements
+    document.getElementById('err').innerHTML = e;
+  }
+  
+  console.log(app);
+</script>
+
+  </div>
+</body>
+</html>
